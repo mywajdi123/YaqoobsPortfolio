@@ -16,7 +16,7 @@ import {
     figma,
     docker,
     meta,
-    starbucks,
+    CACI,
     tesla,
     shopify,
     carrent,
@@ -52,10 +52,6 @@ import {
     {
       title: "Backend Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
     },
   ];
   
@@ -117,8 +113,8 @@ import {
   const experiences = [
     {
       title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      company_name: "CACI International Inc.",
+      icon: CACI,
       iconBg: "#383E56",
       date: "March 2020 - April 2021",
       points: [
