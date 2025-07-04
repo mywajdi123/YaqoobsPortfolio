@@ -51,7 +51,7 @@ const About = () => {
        and backend using JavaScript, React, Java, Python, Spring Boot and Three.js. I 
        enjoy building cool, interactive apps that are both functional and user friendly. 
        Whether it’s designing sleek UIs or setting up APIs and databases, I love bringing 
-       ideas to life from start to finish. Always learning, always building. 
+       ideas to life from start to finish. I'm always learning and always building. 
        Scroll down and learn more about my experience and background!
       </motion.p>
 
