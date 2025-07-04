@@ -24,7 +24,7 @@ import threejs from "./tech/threejs.svg";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import CACI from "./company/CACI.png";
-import tesla from "./company/tesla.png";
+import ME from "./company/ME.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -55,7 +55,7 @@ export {
   meta,
   shopify,
   CACI,
-  tesla,
+  ME,
   carrent,
   jobit,
   tripguide,
