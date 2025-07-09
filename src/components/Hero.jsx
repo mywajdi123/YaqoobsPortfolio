@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
@@ -29,10 +29,15 @@ const heroText = `Hi, I'm Yaqoob`;
 
 const Hero = () => {
   const [animateLetters, setAnimateLetters] = useState(false);
+  const [showSubtitle, setShowSubtitle] = useState(false);
 
   const handleModelLoaded = () => {
     setTimeout(() => {
       setAnimateLetters(true);
+
+      setTimeout(() => {
+        setShowSubtitle(true);
+      }, 1800);
     }, 1600);
   };
 
@@ -68,11 +73,17 @@ const Hero = () => {
               </motion.span>
             ))}
           </motion.h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          
+          <motion.p
+            className={`${styles.heroSubText} mt-2 text-white-100`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={showSubtitle ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             Software Engineer with a Computer Science degree from{" "}
             <span className="text-[#E57200]">UVA</span>
             <br className="sm:block hidden" />
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -101,7 +112,7 @@ const Hero = () => {
       <motion.img
         src={icon360}
         alt="360 camera view"
-        className="absolute bottom-8 right-1/3 w-14 h-14 opacity-250 pointer-events-none z-30"
+        className="absolute bottom-8 right-1/3 w-14 h-14 opacity-80 pointer-events-none z-30"
         style={{
           filter: "drop-shadow(0 2px 8px #000a)",
           transform: "translateX(60px)",
