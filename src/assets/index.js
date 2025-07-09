@@ -21,8 +21,6 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
 import CACI from "./company/CACI.png";
 import ME from "./company/ME.png";
 
@@ -52,8 +50,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
   CACI,
   ME,
   carrent,
