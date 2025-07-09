@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import icon360 from "../assets/360.png"
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#448EE4]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+          <div className='w-1 sm:h-80 h-40 blue-gradient' />
         </div>
 
         <div>
@@ -43,6 +44,14 @@ const Hero = () => {
           </div>
         </a>
       </div>
+
+      <img
+        src={icon360}
+        alt="360 camera view"
+        className="absolute bottom-8 right-8 w-14 h-14 opacity-80 pointer-events-none z-30"
+        style={{ filter: "drop-shadow(0 2px 8px #000a)" }}
+      />
+      
     </section>
   );
 };
