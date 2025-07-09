@@ -1,13 +1,13 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import icon360 from "../assets/360.png";
 
-// Animation for the parent (controls the stagger timing)
 const container = {
   animate: {
     transition: {
-      staggerChildren: 0.07, // Delay between each letter
+      staggerChildren: 0.07,
     },
   },
 };
@@ -15,7 +15,7 @@ const container = {
 const letterVariants = {
   initial: { y: 0 },
   animate: {
-    y: [0, -24, 0], // bounce up then down
+    y: [0, -24, 0],
     transition: {
       duration: 0.7,
       type: "spring",
@@ -28,6 +28,14 @@ const letterVariants = {
 const heroText = `Hi, I'm Yaqoob`;
 
 const Hero = () => {
+  const [animateLetters, setAnimateLetters] = useState(false);
+
+  const handleModelLoaded = () => {
+    setTimeout(() => {
+      setAnimateLetters(true);
+    }, 1600);
+  };
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -43,24 +51,22 @@ const Hero = () => {
             className={`${styles.heroHeadText} text-white`}
             variants={container}
             initial="initial"
-            animate="animate"
+            animate={animateLetters ? "animate" : "initial"}
             style={{ display: "flex", flexWrap: "wrap", gap: "2px" }}
           >
-
             {heroText.split("").map((char, idx) => (
               <motion.span
-              key={idx}
-              variants={letterVariants}
-              style={{
-                display: "inline-block",
-                color: idx >= 8 ? "#448EE4" : undefined, // All of "Yaqoob" in blue
+                key={idx}
+                variants={letterVariants}
+                style={{
+                  display: "inline-block",
+                  color: idx >= 8 ? "#448EE4" : undefined,
                 }}
                 className={idx >= 8 ? "text-[#448EE4]" : ""}
-                >
-                  {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
           </motion.h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Software Engineer with a Computer Science degree from{" "}
@@ -70,7 +76,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <ComputersCanvas onLoaded={handleModelLoaded} />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
@@ -95,16 +101,10 @@ const Hero = () => {
       <motion.img
         src={icon360}
         alt="360 camera view"
-        className="absolute bottom-8 left-1/2 w-14 h-14 opacity-80 pointer-events-none z-30"
+        className="absolute bottom-8 right-1/3 w-14 h-14 opacity-250 pointer-events-none z-30"
         style={{
           filter: "drop-shadow(0 2px 8px #000a)",
           transform: "translateX(60px)",
-        }}
-        animate={{ rotate: [0, 360] }}
-        transition={{
-          repeat: Infinity,
-          duration: 2,
-          ease: "linear",
         }}
       />
     </section>
