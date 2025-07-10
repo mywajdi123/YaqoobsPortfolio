@@ -112,7 +112,7 @@ const Hero = () => {
       <motion.img
         src={icon360}
         alt="360 camera view"
-        className="absolute bottom-8 right-1/3 w-14 h-14 opacity-80 pointer-events-none z-30"
+        className="absolute bottom-8 right-1/3 w-14 h-14 opacity-120 pointer-events-none z-30"
         style={{
           filter: "drop-shadow(0 2px 8px #000a)",
           transform: "translateX(60px)",
