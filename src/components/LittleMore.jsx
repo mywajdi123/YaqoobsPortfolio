@@ -12,19 +12,19 @@ import cafe from "../assets/cafe.jpg";
 const aboutCards = [
   {
     img: yaqoob,
-    fact: "💻 Full-stack developer—React, Node.js, Java, and more.",
+    fact: "📚 Fun fact is that I can speak 3 languages.",
   },
   {
     img: plane,
-    fact: "🌏 I enjoy travelling and exploring and learning more about new cultures.",
+    fact: "🌏 I enjoy traveling and exploring new parts of the world.",
   },
   {
     img: hiking,
-    fact: "🥾 Hiking and Backpacking enthusiast - always planning the next adventure.",
+    fact: "🥾 I am really into the outdoors and I am always planning my next adventure.",
   },
   {
     img: cafe,
-    fact: "☕️ Enjoy spending time in cafés and trying out local coffee shops",
+    fact: "☕️ I enjoy spending time in cozy cafés and exploring local coffee spots.",
   },
 ];
 
@@ -32,10 +32,11 @@ const AboutMe = () => {
   return (
     <div className="mt-12 bg-[#17213d] rounded-[32px] shadow-lg px-8 py-10 flex flex-col items-center max-w-6xl mx-auto">
       <motion.div variants={textVariant()} className="w-full">
-        <h2 className={styles.sectionHeadText + " text-center"}>A little more about me…</h2>
+        <h2 className={styles.sectionHeadText + " text-center"}>A little more about me. . .</h2>
         <p className="mt-2 text-white-100 text-[18px] text-center max-w-3xl mx-auto">
-          Hey, I'm Yaqoob—a full-stack developer with a love for learning, new adventures, and creative problem solving.
-          Whether I’m building web apps or hiking new trails, I’m always up for a challenge and a good cup of coffee.
+          I’m a full-stack developer who likes learning new things, 
+          building web apps, and exploring new ideas when I get the chance. I enjoy a good challenge whether 
+          that’s at my desk or out when I am hiking. Scroll down and let's connect!
         </p>
       </motion.div>
 
