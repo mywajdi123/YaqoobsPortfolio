@@ -26,7 +26,7 @@ import ME from "./company/ME.png";
 
 import CarAI from "./CarAI.png";
 import movieApp from "./movieApp.png";
-import tripguide from "./tripguide.png";
+import RxApp from "./RxApp.png";
 
 export {
   logo,
@@ -54,5 +54,5 @@ export {
   ME,
   CarAI,
   movieApp,
-  tripguide,
+  RxApp,
 };

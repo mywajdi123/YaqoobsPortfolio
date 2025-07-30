@@ -19,7 +19,7 @@ import {
     ME,
     CarAI,
     movieApp,
-    tripguide,
+    RxApp,
     threejs,
   } from "../assets";
   
@@ -194,9 +194,9 @@ import {
       source_code_link: "https://github.com/mywajdi123/movie-react-app",
     },
     {
-      name: "Trip Guide",
+      name: "Pharmacy Shipping Management App",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Web application designed to help pharmacies track cold chain medication shipments end to end with a 3 step process: create med shipment, price and shipment details, and review to submit.",
       tags: [
         {
           name: "nextjs",
@@ -211,8 +211,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: RxApp,
+      source_code_link: "https://github.com/mywajdi123/Pharmacy-Shipping-Tracker/tree/main",
     },
   ];
   
