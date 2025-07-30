@@ -17,8 +17,8 @@ import {
     docker,
     CACI,
     ME,
-    carrent,
-    jobit,
+    CarAI,
+    movieApp,
     tripguide,
     threejs,
   } from "../assets";
@@ -44,7 +44,7 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
@@ -144,46 +144,54 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Car Parts Search with Ai",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "An intelligent automotive parts identification system that uses computer vision, OCR, and machine learning to identify car parts from photos and help users find where to purchase them.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "python",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "OCR",
           color: "pink-text-gradient",
         },
+        {
+          name: "ComputerVision",
+          color: "orange-text-gradient",
+        },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: CarAI,
+      source_code_link: "https://github.com/mywajdi123/car-part-searcher-with-Ai",
     },
     {
-      name: "Job IT",
+      name: "Netflix Style Movie Discovery Platform",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A modern, Netflix inspired movie discovery application built with React, featuring glassmorphism design, real time search, and trending analytics powered by TMDB API and Appwrite.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "CSS",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Appwrite",
           color: "pink-text-gradient",
         },
+         {
+          name: "API's",
+          color: "orange-text-gradient",
+        },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: movieApp,
+      source_code_link: "https://github.com/mywajdi123/movie-react-app",
     },
     {
       name: "Trip Guide",

@@ -24,8 +24,8 @@ import threejs from "./tech/threejs.svg";
 import CACI from "./company/CACI.png";
 import ME from "./company/ME.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
+import CarAI from "./CarAI.png";
+import movieApp from "./movieApp.png";
 import tripguide from "./tripguide.png";
 
 export {
@@ -52,7 +52,7 @@ export {
   threejs,
   CACI,
   ME,
-  carrent,
-  jobit,
+  CarAI,
+  movieApp,
   tripguide,
 };
