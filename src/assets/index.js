@@ -9,15 +9,14 @@ import close from "./close.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import java from "./tech/java.png";
+import figma from "./tech/figma.png";
 import git from "./tech/git.png";
-import spring from "./tech/spring.png";
+import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import PostgreSQL from "./tech/PostgreSQL.png";
+import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import python from "./tech/python.png";
-import django from "./tech/django.png";
+import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -40,15 +39,14 @@ export {
   close,
   css,
   docker,
-  java,
+  figma,
   git,
-  spring,
+  html,
   javascript,
-  PostgreSQL,
+  mongodb,
   nodejs,
   reactjs,
-  django,
-  python,
+  redux,
   tailwind,
   typescript,
   threejs,
