@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
@@ -73,7 +74,15 @@ const Contact = () => {
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <div className="flex items-center gap-5 mt-4">
+          <a href="https://github.com/mywajdi123" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-white text-[28px] hover:text-gray-400 transition" />
+          </a>
+          <a href="https://www.linkedin.com/in/mohamadywajdi/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-white text-[28px] hover:text-[#0A66C2] transition" />
+          </a>
+        </div>
 
         <form
           ref={formRef}
