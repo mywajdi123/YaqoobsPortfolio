@@ -5,15 +5,16 @@ import {
     web,
     javascript,
     typescript,
-    html,
+    spring,
     css,
     reactjs,
-    redux,
+    django,
+    python,
     tailwind,
     nodejs,
-    mongodb,
+    PostgreSQL,
     git,
-    figma,
+    java,
     docker,
     CACI,
     ME,
@@ -55,8 +56,8 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
+      name: "Spring Boot",
+      icon: spring,
     },
     {
       name: "CSS 3",
@@ -75,8 +76,12 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Django",
+      icon: django,
+    },
+    {
+      name: "Python",
+      icon: python,
     },
     {
       name: "Tailwind CSS",
@@ -87,8 +92,8 @@ import {
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "PostgreSQL",
+      icon: PostgreSQL,
     },
     {
       name: "Three JS",
@@ -99,8 +104,8 @@ import {
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
+      name: "Java",
+      icon: java,
     },
     {
       name: "docker",
