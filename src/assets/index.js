@@ -7,9 +7,8 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import java from "./tech/java.png";
+import java from "./tech/java.webp";
 import git from "./tech/git.png";
 import spring from "./tech/spring.png";
 import javascript from "./tech/javascript.png";
@@ -17,7 +16,7 @@ import PostgreSQL from "./tech/PostgreSQL.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import python from "./tech/python.png";
-import django from "./tech/django.png";
+import django from "./tech/django.webp";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -38,7 +37,6 @@ export {
   github,
   menu,
   close,
-  css,
   docker,
   java,
   git,

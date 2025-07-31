@@ -6,7 +6,6 @@ import {
     javascript,
     typescript,
     spring,
-    css,
     reactjs,
     django,
     python,
@@ -58,10 +57,6 @@ import {
     {
       name: "Spring Boot",
       icon: spring,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
     },
     {
       name: "JavaScript",
