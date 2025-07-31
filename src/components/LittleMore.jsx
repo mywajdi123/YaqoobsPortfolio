@@ -12,7 +12,7 @@ import cafe from "../assets/cafe.jpg";
 const aboutCards = [
   {
     img: yaqoob,
-    fact: "📚 Fun fact is that I can speak 3 languages.",
+    fact: "📚 Fun fact - I can speak 3 languages.",
   },
   {
     img: plane,
