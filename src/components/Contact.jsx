@@ -17,6 +17,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { target } = e;
@@ -26,10 +27,44 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      alert("Please fill out all fields correctly before submitting.");
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -48,13 +83,14 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("I appreciate your message. I’ll respond as soon as I can.");
+          alert("I appreciate your message. I'll respond as soon as I can.");
 
           setForm({
             name: "",
             email: "",
             message: "",
           });
+          setErrors({});
         },
         (error) => {
           setLoading(false);
@@ -97,9 +133,13 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Please enter your name"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.name ? 'border-2 border-red-500' : ''
+              }`}
             />
+            {errors.name && <span className="text-red-500 text-sm mt-2">{errors.name}</span>}
           </label>
+          
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your email</span>
             <input
@@ -108,9 +148,13 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="Please enter your email address"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.email ? 'border-2 border-red-500' : ''
+              }`}
             />
+            {errors.email && <span className="text-red-500 text-sm mt-2">{errors.email}</span>}
           </label>
+          
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
@@ -119,13 +163,19 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='Please enter your message'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.message ? 'border-2 border-red-500' : ''
+              }`}
             />
+            {errors.message && <span className="text-red-500 text-sm mt-2">{errors.message}</span>}
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            disabled={loading}
+            className={`bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ${
+              loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-opacity-80'
+            }`}
           >
             {loading ? "Sending..." : "Send"}
           </button>
